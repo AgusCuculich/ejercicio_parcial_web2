@@ -41,10 +41,10 @@ class gambleController {
     public function showGambles() {
         $gambles = $this->gambleModel->getGambles();
 
-        foreach ($gambles as $gamble) {
-            $gameName = $this->gameModel->getName($gamble->id_juego);
-            
-        }
+        $joinInfo = $this->gambleModel->getName();
+        $gambles = $joinInfo;
+
+        //var_dump($gambles);
 
         $this->view->showGambles($gambles);
     }

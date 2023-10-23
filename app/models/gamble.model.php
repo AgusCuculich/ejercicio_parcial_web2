@@ -20,5 +20,13 @@ class gambleModel {
         $gambles = $query->fetchAll(PDO::FETCH_OBJ);
         return $gambles;
     }
+
+    public function getName() {
+        $query = $this->db->prepare('SELECT * FROM apuesta INNER JOIN juego ON apuesta.id_juego = juego.id');
+        $query->execute();
+    
+        return $query->fetchAll(PDO::FETCH_OBJ);
+    }
+    
     
 }

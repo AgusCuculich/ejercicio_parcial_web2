@@ -31,11 +31,4 @@ class gameModel {
         $query->execute([$id, $name, $cant_jugadores, $cardGame]);
     }
 
-
-    public function getName($id) {
-        $query = $this->db->prepare('SELECT nombre FROM juego WHERE id = ?');
-        $query->execute([$id]);
-        $nombre = $query->fetch(PDO::FETCH_OBJ);
-        return $nombre;
-    }
 }
