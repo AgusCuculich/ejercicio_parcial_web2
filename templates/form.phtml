@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="process_form">
+        <input type="text" name="name" placeholder="Nombre del juego"/>
+        <input type="number" name="cant_jugadores" placeholder="Cantidad de jugadores"/>
+        <input type="radio" id="radioV" name="cardGame" value="v"/>
+        <label for="radioV">Verdadero</label>
+        <input type="radio" id="radioF" name="cardGame" value="f"/>
+        <label for="radioF">Falso</label>
+        <button type="submit">Cargar datos</button>
+        <div class="error">
+            <p><?= $error ?></p>
+        </div>
+    </form>
+</body>
+</html>

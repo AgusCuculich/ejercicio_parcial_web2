@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="agregar">Agregar juego</a></p>
+    <p><a href="apuesta">Añadir apuesta</a></p>
+    <p><a href="mostrar_apuestas">Mostrar apuestas</a></p>
+    <ul>
+    <?php foreach($games as $game): ?>
+        <li>
+            <h2><?= $game->nombre ?></h2>
+            <a href="eliminar/<?= $game->id ?>">Eliminar</a>
+        </li>
+    <?php endforeach ?>
+    </ul>
+</body>
+</html>
